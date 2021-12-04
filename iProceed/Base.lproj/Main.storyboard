@@ -137,22 +137,6 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2dC-tg-miw" userLabel="Google Login">
-                                        <rect key="frame" x="41" y="685" width="414" height="896"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cUm-LM-NDA" userLabel="Facebook Login">
-                                        <rect key="frame" x="212" y="685" width="162" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g54-L5-ur5" userLabel="Apple Login">
-                                        <rect key="frame" x="41" y="766" width="158" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-0f-ki9" userLabel="Twitter Login">
-                                        <rect key="frame" x="212" y="766" width="161" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </stackView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="Vma-9i-BFM"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -163,12 +147,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="vjq-Bz-fdv"/>
                     <connections>
-                        <outlet property="appleLoginProviderStackView" destination="g54-L5-ur5" id="fuM-4k-4pZ"/>
                         <outlet property="emailTF" destination="1wR-rN-izr" id="ZZa-lg-4Se"/>
-                        <outlet property="facebookLoginProviderStackView" destination="cUm-LM-NDA" id="ChK-eE-6LG"/>
-                        <outlet property="googleLoginProviderStackView" destination="2dC-tg-miw" id="6H6-Ft-xmo"/>
                         <outlet property="passwordTF" destination="e7j-o1-9qU" id="ZuN-ba-JUO"/>
-                        <outlet property="twitterLoginProviderStackView" destination="VvL-0f-ki9" id="gvO-bf-ODZ"/>
                         <segue destination="eSZ-G5-eUS" kind="presentation" identifier="instructorLoginSegue" modalPresentationStyle="fullScreen" id="kZo-jJ-hwF"/>
                         <segue destination="JrK-dC-ho7" kind="presentation" identifier="studentLoginSegue" modalPresentationStyle="fullScreen" id="WMC-Ow-qhb"/>
                     </connections>
@@ -180,9 +160,9 @@
         <!--Password Reset View-->
         <scene sceneID="IeK-dR-ygK">
             <objects>
-                <viewController id="TVM-o8-0QE" customClass="PasswordResetView" customModule="iProceed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="TVM-o8-0QE" customClass="PasswordResetView" customModule="iProceed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iCI-WZ-bp6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJA-E4-oOY">
@@ -193,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="dTM-OF-quq">
-                                <rect key="frame" x="-5" y="-1" width="411" height="839"/>
+                                <rect key="frame" x="-5" y="-1" width="411" height="893"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" id="0mo-MN-lHb">
@@ -249,9 +229,9 @@
         <!--Reset Code View-->
         <scene sceneID="JYT-Tn-55Q">
             <objects>
-                <viewController id="FXe-Vo-bq8" customClass="ResetCodeView" customModule="iProceed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="FXe-Vo-bq8" customClass="ResetCodeView" customModule="iProceed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jyJ-sh-1St">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVd-35-TzJ">
@@ -262,7 +242,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="HyF-tQ-G9C">
-                                <rect key="frame" x="-1" y="-1" width="414" height="839"/>
+                                <rect key="frame" x="-1" y="-1" width="414" height="893"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" id="gJp-hj-EAT">
@@ -318,9 +298,9 @@
         <!--Forgot password-->
         <scene sceneID="QjS-aU-B6G">
             <objects>
-                <viewController id="QWM-DU-6aY" customClass="ForgotPasswordView" customModule="iProceed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="QWM-DU-6aY" customClass="ForgotPasswordView" customModule="iProceed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5tM-WQ-YDz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8w-cT-Dkc">
@@ -331,7 +311,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="hO3-YV-fPJ">
-                                <rect key="frame" x="-1" y="-2" width="414" height="843"/>
+                                <rect key="frame" x="-1" y="-2" width="414" height="897"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" id="YgL-59-xrT">
@@ -964,8 +944,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMI-qL-jdW">
                                 <rect key="frame" x="59" y="284.5" width="296" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="tintColor" name="AccentColor"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Your Profile"/>
                                 <connections>
                                     <action selector="reloadProfile:" destination="iDu-Xw-Ygw" eventType="touchUpInside" id="0t1-sS-ne4"/>
                                 </connections>
@@ -1226,26 +1207,6 @@
             </objects>
             <point key="canvasLocation" x="1718.840579710145" y="1044.6428571428571"/>
         </scene>
-        <!--Payment-->
-        <scene sceneID="qN4-Nf-wMd">
-            <objects>
-                <viewController id="p34-Cd-zRv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Yzq-P4-fi5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="p8f-jD-UdR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Payment" id="4rc-cG-VX6">
-                        <barButtonItem key="rightBarButtonItem" image="person.fill" catalog="system" id="K0L-Sf-QTm">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rGZ-XK-dsE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2600" y="1045"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4n9-XI-Z6v">
             <objects>
@@ -1305,9 +1266,9 @@
         <!--Edit Profile-->
         <scene sceneID="Omd-Kt-G2n">
             <objects>
-                <viewController id="JHw-kC-BC3" customClass="EditProfileView" customModule="iProceed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="JHw-kC-BC3" customClass="EditProfileView" customModule="iProceed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PUi-jY-cVF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="adI-2G-tSr">
@@ -1385,14 +1346,14 @@
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </barButtonItem>
             </objects>
-            <point key="canvasLocation" x="-513.04347826086962" y="2061.8303571428569"/>
+            <point key="canvasLocation" x="-1510" y="1346"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="kZo-jJ-hwF"/>
         <segue reference="WMC-Ow-qhb"/>
-        <segue reference="n7A-SG-mjg"/>
-        <segue reference="KsL-MX-qTb"/>
+        <segue reference="alC-k2-eJp"/>
+        <segue reference="aUI-Lo-z2v"/>
         <segue reference="rUm-4t-ehQ"/>
     </inferredMetricsTieBreakers>
     <resources>

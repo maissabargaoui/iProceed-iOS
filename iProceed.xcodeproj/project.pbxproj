@@ -22,6 +22,8 @@
 		046D7F4527549F98004400B7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D7F4427549F98004400B7 /* ProfileViewController.swift */; };
 		046D7F4A27549FA4004400B7 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D7F4927549FA4004400B7 /* MoreViewController.swift */; };
 		046D7F4F27549FB6004400B7 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D7F4E27549FB6004400B7 /* PaymentViewController.swift */; };
+		046D7F642754B2B0004400B7 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D7F632754B2B0004400B7 /* Course.swift */; };
+		046D7F692754B37D004400B7 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D7F682754B37D004400B7 /* user.swift */; };
 		046EAD0B27499AF900B670FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAD0A27499AF900B670FA /* AppDelegate.swift */; };
 		046EAD0D27499AF900B670FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAD0C27499AF900B670FA /* SceneDelegate.swift */; };
 		046EAD1227499AF900B670FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046EAD1027499AF900B670FA /* Main.storyboard */; };
@@ -67,6 +69,8 @@
 		046D7F4427549F98004400B7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		046D7F4927549FA4004400B7 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		046D7F4E27549FB6004400B7 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		046D7F632754B2B0004400B7 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		046D7F682754B37D004400B7 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		046EAD0A27499AF900B670FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046EAD0C27499AF900B670FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		046EAD1127499AF900B670FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,9 +114,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046D7F5E2754B1AD004400B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				046D7F632754B2B0004400B7 /* Course.swift */,
+				046D7F682754B37D004400B7 /* user.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		046D7F6D2754C28A004400B7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		046EACFE27499AF900B670FA = {
 			isa = PBXGroup;
 			children = (
+				046D7F6D2754C28A004400B7 /* Utilities */,
 				046EAD0927499AF900B670FA /* iProceed */,
 				046EAD2327499AFB00B670FA /* iProceedTests */,
 				046EAD2E27499AFB00B670FA /* iProceedUITests */,
@@ -127,6 +148,7 @@
 				8D36B0822750410700CDB60A /* View */,
 				046EAD0A27499AF900B670FA /* AppDelegate.swift */,
 				046EAD0C27499AF900B670FA /* SceneDelegate.swift */,
+				046D7F5E2754B1AD004400B7 /* Models */,
 				046EAD1627499AFB00B670FA /* Assets.xcassets */,
 				046EAD1B27499AFB00B670FA /* Info.plist */,
 				046EAD1327499AF900B670FA /* iProceed.xcdatamodeld */,
@@ -456,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046D7F692754B37D004400B7 /* user.swift in Sources */,
 				046D7F4027549F7D004400B7 /* EditCourseViewController.swift in Sources */,
 				046D7F0927549CDD004400B7 /* WelcomeSceneViewController.swift in Sources */,
 				046D7F2C27549F35004400B7 /* RegisterViewController.swift in Sources */,
@@ -463,6 +486,7 @@
 				046D7F1827549E90004400B7 /* ResetCodeViewController.swift in Sources */,
 				046EAD1527499AF900B670FA /* iProceed.xcdatamodeld in Sources */,
 				046D7F4A27549FA4004400B7 /* MoreViewController.swift in Sources */,
+				046D7F642754B2B0004400B7 /* Course.swift in Sources */,
 				046D7F4F27549FB6004400B7 /* PaymentViewController.swift in Sources */,
 				046D7F4527549F98004400B7 /* ProfileViewController.swift in Sources */,
 				046D7F3627549F59004400B7 /* JoinFreeCourseViewController.swift in Sources */,
