@@ -7,16 +7,41 @@
 
 import UIKit
 import CoreData
+import GoogleSignIn
+import FBSDKCoreKit
+import TwitterKit
+import Braintree
 
-
-
-@main
+@main 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        // Paypal
+        BTAppSwitch.setReturnURLScheme("com.app.launch.iProceed.payments")
+        
+        // Facebook
+        let facebook = ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
+        if (facebook){
+            return true
+        }
+        
+        // Google
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            if error != nil || user == nil {
+                // Show the app's signed-out state.
+            } else {
+                // Show the app's signed-in state.
+            }
+        }
+        
+        // Twitter
+        TWTRTwitter.sharedInstance().start(withConsumerKey:"VbEFXRpUiwvzrG6Jw0EpJRmw9", consumerSecret:"pZjrVQmMEgARh34iF5dN8kPQqjnuNFlPWHeJJzWKjK4VjF0jyF")
         
         return true
         
@@ -79,6 +104,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if url.scheme?.localizedCaseInsensitiveCompare("com.app.launch.iProceed.payments") == .orderedSame {
+            return BTAppSwitch.handleOpen(url, options: options)
+        }
+        return false
     }
 }
 

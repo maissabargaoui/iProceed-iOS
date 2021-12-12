@@ -5,23 +5,36 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
-  - FBAEMKit (11.2.1):
-    - FBAEMKit/AEM (= 11.2.1)
-  - FBAEMKit/AEM (11.2.1):
-    - FBSDKCoreKit_Basics (~> 11.2.1)
-  - FBSDKCoreKit (11.2.1):
-    - FBSDKCoreKit/Core (= 11.2.1)
-  - FBSDKCoreKit/Core (11.2.1):
-    - FBAEMKit (~> 11.2.1)
-    - FBSDKCoreKit_Basics (~> 11.2.1)
-  - FBSDKCoreKit_Basics (11.2.1):
-    - FBSDKCoreKit_Basics/Basics (= 11.2.1)
-  - FBSDKCoreKit_Basics/Basics (11.2.1)
-  - FBSDKLoginKit (11.2.1):
-    - FBSDKLoginKit/Login (= 11.2.1)
-  - FBSDKLoginKit/Login (11.2.1):
-    - FBSDKCoreKit (~> 11.2.1)
-    - FBSDKCoreKit_Basics (~> 11.2.1)
+  - Braintree (4.22.0):
+    - Braintree/Card (= 4.22.0)
+    - Braintree/Core (= 4.22.0)
+    - Braintree/PayPal (= 4.22.0)
+    - Braintree/UI (= 4.22.0)
+  - Braintree/Card (4.22.0):
+    - Braintree/Core
+  - Braintree/Core (4.22.0)
+  - Braintree/PayPal (4.22.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.22.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.22.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.22.0)
+  - Braintree/UI (4.22.0):
+    - Braintree/Card
+    - Braintree/Core
+  - FBAEMKit (12.1.0):
+    - FBSDKCoreKit_Basics (= 12.1.0)
+  - FBSDKCoreKit (12.1.0):
+    - FBAEMKit (= 12.1.0)
+    - FBSDKCoreKit_Basics (= 12.1.0)
+  - FBSDKCoreKit_Basics (12.1.0)
+  - FBSDKLoginKit (12.1.0):
+    - FBSDKCoreKit (= 12.1.0)
   - GoogleSignIn (6.0.2):
     - AppAuth (~> 1.4)
     - GTMAppAuth (~> 1.0)
@@ -30,6 +43,7 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
+  - lottie-ios (3.2.3)
   - SwiftyJSON (4.3.0)
   - TwitterCore (3.2.0)
   - TwitterKit (3.4.2):
@@ -37,8 +51,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
-  - FBSDKLoginKit (~> 11.0)
+  - Braintree (~> 4.22.0)
+  - FBSDKLoginKit
   - GoogleSignIn
+  - lottie-ios
   - SwiftyJSON (~> 4.0)
   - TwitterKit
 
@@ -46,6 +62,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AppAuth
+    - Braintree
     - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
@@ -53,6 +70,7 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - lottie-ios
     - SwiftyJSON
     - TwitterCore
     - TwitterKit
@@ -60,17 +78,19 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
-  FBAEMKit: 5de0a7aaa854eec69bb5be20795952a63d38a5f6
-  FBSDKCoreKit: bf655f808b040ed66a72b9922911b39d703e64f4
-  FBSDKCoreKit_Basics: 73ebe3a27eb688ac5b5aa7e99f68992993042115
-  FBSDKLoginKit: 2e76831ef08d356b8f9150ea51cce865074ea304
+  Braintree: e814ec196208d3e961c488cf4071de043f399cf9
+  FBAEMKit: 56c0bb9b42e3747cd82b67934f0c2b19325382ea
+  FBSDKCoreKit: 75368765d9c2303073145a7925dfaa9d60bcd77b
+  FBSDKCoreKit_Basics: 39865aff97e5f6951a78fb3e89dc4460e35e1895
+  FBSDKLoginKit: e993f97c7cc794c5da4056d8aec3c3d66033a727
   GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 72929555ad7d34d04e5676d1648b289fed2f8c25
+PODFILE CHECKSUM: 2e7b7c283cbb741895db67dcc02cb3037b639d51
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0

@@ -35,7 +35,7 @@
 			<string>Facebook</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb646807916342968</string>
+				<string>fb448917066628661</string>
 			</array>
 		</dict>
 		<dict>
@@ -48,13 +48,23 @@
 				<string>twitterkit-VbEFXRpUiwvzrG6Jw0EpJRmw9</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.app.launch.iProceed</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.app.launch.iProceed.payments</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>646807916342968</string>
+	<string>448917066628661</string>
 	<key>FacebookClientToken</key>
-	<string>572ce552fd5f327e5728a144641e4fb2</string>
+	<string>4a8173a85036c3f6b7601b08b0454d13</string>
 	<key>FacebookDisplayName</key>
 	<string>iProceed</string>
 	<key>LSApplicationQueriesSchemes</key>
