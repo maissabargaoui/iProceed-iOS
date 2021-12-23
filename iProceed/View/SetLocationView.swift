@@ -91,7 +91,7 @@ class SetLocationView: UIViewController, MKMapViewDelegate, CLLocationManagerDel
     
     // actions
     @IBAction func addUserLocation(_ sender: Any) {
-        UserViewModel().getUserFromToken(userToken: UserDefaults.standard.string(forKey: "userToken")!) { [self] success, user in
+        UserViewModel().getUserFromToken() { [self] success, user in
             if success {
                 UserViewModel().setLocation(email: (user?.email)!, latitude: myPin.coordinate.latitude, longitude: myPin.coordinate.longitude, clear: false) { success in
                     if success {

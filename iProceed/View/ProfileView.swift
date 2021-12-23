@@ -11,8 +11,9 @@ import FBSDKLoginKit
 
 class ProfileView: UIViewController, ModalTransitionListener {
 
+    // TODO qrcode
+    
     // variables
-    let token = UserDefaults.standard.string(forKey: "userToken")!
     var user : User?
     
     // iboutlets
@@ -45,7 +46,7 @@ class ProfileView: UIViewController, ModalTransitionListener {
     
     func initializeProfile() {
         print("initializing profile")
-        UserViewModel().getUserFromToken(userToken: token, completed: { success, user in
+        UserViewModel().getUserFromToken(completed: { success, user in
             if success {
                 if user?.name != "" {
                     self.nameLabel.text = user?.name
@@ -84,7 +85,7 @@ class ProfileView: UIViewController, ModalTransitionListener {
     @IBAction func editProfil(_ sender: Any) {
         
         if ((UserDefaults.standard.string(forKey: "userToken")) != nil){
-            UserViewModel().getUserFromToken(userToken: token, completed: { success, user in
+            UserViewModel().getUserFromToken(completed: { success, user in
                 self.user = user
                 if success {
                     self.performSegue(withIdentifier: "editProfileSegue", sender: user)

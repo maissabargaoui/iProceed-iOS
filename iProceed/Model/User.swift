@@ -9,7 +9,7 @@ import Foundation
 
 struct User: Encodable {
     
-    internal init(_id: String? = nil, name: String? = nil, email: String? = nil, address: String? = nil, latitude: String? = nil, longitude: String? = nil, password: String? = nil, phone: String? = nil, role: String? = nil, isVerified: Bool? = nil) {
+    internal init(_id: String? = nil, name: String? = nil, email: String? = nil, address: String? = nil, latitude: String? = nil, longitude: String? = nil, password: String? = nil, phone: String? = nil, role: String? = nil, isVerified: Bool? = nil, typeInstructeur: String? = nil, prixParCour: Float? = nil, neverNotified: Bool? = nil, coursNotifications: [String]? = nil) {
         self._id = _id
         self.name = name
         self.email = email
@@ -20,8 +20,12 @@ struct User: Encodable {
         self.phone = phone
         self.role = role
         self.isVerified = isVerified
+        self.typeInstructeur = typeInstructeur
+        self.prixParCour = prixParCour
+        self.neverNotified = neverNotified
+        self.coursNotifications = coursNotifications
     }
-    
+
     var _id : String?
     var name : String?
     var email : String?
@@ -32,4 +36,8 @@ struct User: Encodable {
     var phone : String?
     var role : String?
     var isVerified : Bool?
+    var typeInstructeur: String?
+    var prixParCour: Float?
+    var neverNotified: Bool?
+    var coursNotifications: [String]?
 }

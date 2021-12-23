@@ -20,10 +20,7 @@ class CourseViewModel {
                 switch response.result {
                 case .success:
                     let jsonData = JSON(response.data!)
-                    debugPrint(jsonData)
-                    
                     var courses : [Course]? = []
-                    debugPrint(jsonData["course"])
                     for singleJsonItem in jsonData["course"] {
                         courses!.append(self.makeCourse(jsonItem: singleJsonItem.1))
                     }

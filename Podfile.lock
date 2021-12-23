@@ -44,6 +44,9 @@ PODS:
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
   - lottie-ios (3.2.3)
+  - SendBirdSDK (3.1.1)
+  - SendBirdUIKit (2.2.1):
+    - SendBirdSDK (~> 3.1.1)
   - SwiftyJSON (4.3.0)
   - TwitterCore (3.2.0)
   - TwitterKit (3.4.2):
@@ -55,6 +58,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - GoogleSignIn
   - lottie-ios
+  - SendBirdUIKit
   - SwiftyJSON (~> 4.0)
   - TwitterKit
 
@@ -71,6 +75,8 @@ SPEC REPOS:
     - GTMAppAuth
     - GTMSessionFetcher
     - lottie-ios
+    - SendBirdSDK
+    - SendBirdUIKit
     - SwiftyJSON
     - TwitterCore
     - TwitterKit
@@ -87,10 +93,12 @@ SPEC CHECKSUMS:
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  SendBirdSDK: f698cf686d732889d79854756aba6bbc20062a00
+  SendBirdUIKit: 19f911839f10908e58db91900d33b6758ad47744
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 2e7b7c283cbb741895db67dcc02cb3037b639d51
+PODFILE CHECKSUM: c2f275e9e5b02560169be95a6e8e630ba2835c3f
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.2

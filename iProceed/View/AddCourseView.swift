@@ -45,7 +45,7 @@ class AddCourseView: UIViewController, UIImagePickerControllerDelegate, UINaviga
                 }
                 self.present(Alert.makeSingleActionAlert(titre: "Success", message: "Course added successfully", action: action), animated: true)
             } else {
-                self.present(Alert.makeAlert(titre: "Error", message: "Could not edit course"), animated: true)
+                self.present(Alert.makeAlert(titre: "Error", message: "Could not add course"), animated: true)
             }
         }
     }

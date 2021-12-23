@@ -11,6 +11,8 @@ import CoreLocation
 
 class MoreView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
     
+    // TODO faceid payment
+    
     // variables
     let locationManager = CLLocationManager()
     var activeUser : User?

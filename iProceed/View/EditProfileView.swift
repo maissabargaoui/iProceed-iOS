@@ -67,7 +67,7 @@ class EditProfileView: UIViewController, SecondModalTransitionListener {
     }
     
     func reloadView(onlyLocation: Bool) {
-        UserViewModel().getUserFromToken(userToken: UserDefaults.standard.string(forKey: "userToken")!) { success, user in
+        UserViewModel().getUserFromToken() { success, user in
             if success {
                 self.user = user
                 self.initialize(onlyLocation: true)

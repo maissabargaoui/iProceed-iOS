@@ -44,9 +44,9 @@ class UserViewModel {
                 case .success:
                     let jsonData = JSON(response.data!)
                     let user = self.makeUser(jsonItem: jsonData["user"])
-                        print("Found user --------------------")
-                        print(user)
-                        print("-------------------------------")
+                    print("Found user --------------------")
+                    print(user)
+                    print("-------------------------------")
                     completed(true, user)
                 case let .failure(error):
                     debugPrint(error)
@@ -103,28 +103,34 @@ class UserViewModel {
             }
     }
     
-    func getUserFromToken(userToken: String, completed: @escaping (Bool, User?) -> Void ) {
-        print("Looking for user --------------------")
-        AF.request(Constants.serverUrl + "/user/getUserFromToken",
-                   method: .post,
-                   parameters: ["userToken": userToken],
-                   encoding: JSONEncoding.default)
-            .validate(statusCode: 200..<300)
-            .validate(contentType: ["application/json"])
-            .response { response in
-                switch response.result {
-                case .success:
-                    let jsonData = JSON(response.data!)
-                    let user = self.makeUser(jsonItem: jsonData["user"])
+    func getUserFromToken(completed: @escaping (Bool, User?) -> Void ) {
+        
+        if UserDefaults.standard.string(forKey: "userToken") != nil {
+            print("Looking for user --------------------")
+            AF.request(Constants.serverUrl + "/user/getUserFromToken",
+                       method: .post,
+                       parameters: ["userToken": UserDefaults.standard.string(forKey: "userToken")!],
+                       encoding: JSONEncoding.default)
+                .validate(statusCode: 200..<300)
+                .validate(contentType: ["application/json"])
+                .response { response in
+                    switch response.result {
+                    case .success:
+                        let jsonData = JSON(response.data!)
+                        let user = self.makeUser(jsonItem: jsonData["user"])
                         print("Found user --------------------")
                         print(user)
                         print("-------------------------------")
-                    completed(true, user)
-                case let .failure(error):
-                    debugPrint(error)
-                    completed(false, nil)
+                        completed(true, user)
+                    case let .failure(error):
+                        debugPrint(error)
+                        completed(false, nil)
+                    }
                 }
-            }
+        } else {
+            completed(false, nil)
+        }
+        
     }
     
     func loginWithSocialApp(email: String, name: String, role: String, completed: @escaping (Bool, User?) -> Void ) {
@@ -230,6 +236,28 @@ class UserViewModel {
             }
     }
     
+    func editNotifications(user: User, completed: @escaping (Bool) -> Void ) {
+        print(user.coursNotifications!)
+        AF.request(Constants.serverUrl + "/user/edit-notifications",
+                   method: .put,
+                   parameters: [
+                    "email": user.email!,
+                    "neverNotified": user.neverNotified!,
+                    "coursNotifications": user.coursNotifications!
+                   ],
+                   encoding: JSONEncoding.default)
+            .response { response in
+                switch response.result {
+                case .success:
+                    print("Success")
+                    completed(true)
+                case let .failure(error):
+                    print(error)
+                    completed(false)
+                }
+            }
+    }
+    
     func setLocation(email: String, latitude: Double, longitude: Double, clear: Bool, completed: @escaping (Bool) -> Void ) {
         
         AF.request(Constants.serverUrl + "/user/setLocation",
@@ -264,7 +292,19 @@ class UserViewModel {
             password: jsonItem["password"].stringValue,
             phone: jsonItem["phone"].stringValue,
             role: jsonItem["role"].stringValue,
-            isVerified: jsonItem["isVerified"].boolValue
+            isVerified: jsonItem["isVerified"].boolValue,
+            typeInstructeur: jsonItem["typeInstructeur"].stringValue,
+            prixParCour: jsonItem["prixParCour"].floatValue,
+            neverNotified: jsonItem["neverNotified"].boolValue,
+            coursNotifications: jsonArrayToArray(jsonArray: jsonItem["coursNotifications"].arrayValue)
         )
+    }
+    
+    func jsonArrayToArray(jsonArray: [JSON]) -> [String] {
+        var items : [String] = []
+        for jsonItem in jsonArray {
+            items.append(jsonItem.stringValue)
+        }
+        return items
     }
 }

@@ -100,11 +100,13 @@ class SignInView: UIViewController {
     
     func loginWithFacebook() {
         print("fb")
-        let imageData = NSData()
+        _ = NSData()
         
         GraphRequest(graphPath: "me", parameters: ["fields": "first_name,last_name,  picture.width(480).height(480),email, id"]).start { [self] (connection, result, error) in
             
-            debugPrint(error)
+            if (error != nil){
+                debugPrint(error!)
+            }
             
             if let fields = result as? [String:Any],
                let lastname = fields["last_name"] as? String,
@@ -119,7 +121,7 @@ class SignInView: UIViewController {
                     let pictureUrl = NSURL(string: pictureUrlString)
                     
                     let imageData = NSData(contentsOf: pictureUrl! as URL)
-                    let newImage = UIImage(data: imageData as! Data)
+                    _ = UIImage(data: imageData! as Data)
                     
                 }
                 
@@ -139,7 +141,6 @@ class SignInView: UIViewController {
     }
     
     @objc func googleSignIn() {
-        
         GIDSignIn.sharedInstance.signIn(with: googleSignInConfig, presenting: self) { [self] user, error in
             guard error == nil else { return }
             guard let user = user else { return }
@@ -281,9 +282,9 @@ extension SignInView: ASAuthorizationControllerDelegate {
             let email = credentials.email
             
             print("--- Apple login infos ---")
-            print(firstName)
-            print(lastName)
-            print(email)
+            print(firstName!)
+            print(lastName!)
+            print(email!)
             print("--- End Apple login infos ---")
             loginWithSocialMedia(email: email, name: firstName, socialMediaName: "Apple")
             break

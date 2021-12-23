@@ -41,7 +41,7 @@ class CourseDetailsView: UIViewController {
     }
     
     @IBAction func addToFavorites(_ sender: Any) {
-        UserViewModel().getUserFromToken(userToken: UserDefaults.standard.string(forKey: "userToken")!) { [self] success, user in
+        UserViewModel().getUserFromToken() { [self] success, user in
             FavoriteViewModel().addFavorite(favorite: Favorite(date: Date(), user: user!, course: course!)) { success in
                 if success {
                     let action = UIAlertAction(title: "Proceed", style: .default) { UIAlertAction in
