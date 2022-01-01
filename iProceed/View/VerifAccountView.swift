@@ -14,10 +14,6 @@ class VerifAccountView: UIViewController {
     // variables
     var user : User?
     
-    // TODO internationalization french english
-    // TODO notif when nouveau chat
-    // TODO chat tout
-    
     // life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

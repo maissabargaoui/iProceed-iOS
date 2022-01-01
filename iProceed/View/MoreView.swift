@@ -11,8 +11,6 @@ import CoreLocation
 
 class MoreView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
     
-    // TODO faceid payment
-    
     // variables
     let locationManager = CLLocationManager()
     var activeUser : User?
@@ -27,8 +25,8 @@ class MoreView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  
     // life cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "continueWithPaymentSegue"{
-            let destination = segue.destination as! PaymentView
-            destination.user = activeUser
+            let destination = segue.destination as! FaceIdView
+            destination.userToBePaid = activeUser
         }
     }
     

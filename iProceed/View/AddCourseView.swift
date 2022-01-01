@@ -9,13 +9,6 @@ import UIKit
 
 class AddCourseView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    //
-    //  EditCourseView.swift
-    //  iProceed
-    //
-    //  Created by Mac-Mini_2021 on 28/11/2021.
-    //
-    
     // var
     var currentPhoto : UIImage?
     
@@ -48,13 +41,6 @@ class AddCourseView: UIViewController, UIImagePickerControllerDelegate, UINaviga
                 self.present(Alert.makeAlert(titre: "Error", message: "Could not add course"), animated: true)
             }
         }
-    }
-    
-    @IBAction func discard(_ sender: Any) {
-        let action = UIAlertAction(title: "Discard", style: .destructive) { UIAlertAction in
-            self.navigationController?.popViewController(animated: true)
-        }
-        self.present(Alert.makeActionAlert(titre: "Warning", message: "Would you like to discard the changes", action: action),animated: true)
     }
     
     @IBAction func addPicture(_ sender: Any) {

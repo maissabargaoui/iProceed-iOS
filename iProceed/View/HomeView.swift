@@ -22,6 +22,7 @@ class HomeView: UIViewController {
     // methods
     func lottieAnimation() {
         let animationview = AnimationView(name : "61425-light-learning")
+        
         animationview.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
         animationview.center = self.view.center
         animationview.contentMode = .scaleAspectFit

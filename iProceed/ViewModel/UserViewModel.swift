@@ -42,12 +42,7 @@ class UserViewModel {
             .responseData { response in
                 switch response.result {
                 case .success:
-                    let jsonData = JSON(response.data!)
-                    let user = self.makeUser(jsonItem: jsonData["user"])
-                    print("Found user --------------------")
-                    print(user)
-                    print("-------------------------------")
-                    completed(true, user)
+                    completed(true,  self.makeUser(jsonItem: JSON(response.data!)["user"]))
                 case let .failure(error):
                     debugPrint(error)
                     completed(false, nil)
@@ -221,8 +216,9 @@ class UserViewModel {
                     "name": user.name!,
                     "email": user.email!,
                     "address": user.address!,
-                    //"password": user.password!,
-                    "phone": user.phone!
+                    "phone": user.phone!,
+                    "typeInstructeur": user.typeInstructeur!,
+                    "prixParCour": user.prixParCour!
                    ])
             .response { response in
                 switch response.result {

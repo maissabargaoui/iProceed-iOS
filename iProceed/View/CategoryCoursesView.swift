@@ -1,5 +1,5 @@
 //
-//  JoinCourseView.swift
+//  CoursesView.swift
 //  iProceed
 //
 //  Created by Mac-Mini_2021 on 25/11/2021.
@@ -8,19 +8,19 @@
 import UIKit
 import SendBirdUIKit
 
-class JoinCourseView: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CoursesCategoryView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // variables
     var courses = [Course]()
-    var courseForDetails: Course?
-    var selectedType : String?
+    var types : [String] = []
+    var typeForDetails : String?
     
     // iboutlets
     @IBOutlet weak var coursesTableView: UITableView!
     
     // protocols
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        courses.count
+        types.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -28,21 +28,21 @@ class JoinCourseView: UIViewController, UITableViewDataSource, UITableViewDelega
         let contentView = cell.contentView
         let titleLabel = contentView.viewWithTag(1) as! UILabel
         
-        titleLabel.text = courses[indexPath.row].title!
+        titleLabel.text = "Category : " + types[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        courseForDetails = courses[indexPath.row]
-        self.performSegue(withIdentifier: "courseDetailSegue", sender: courseForDetails)
+        typeForDetails = types[indexPath.row]
+        self.performSegue(withIdentifier: "coursesSegue", sender: typeForDetails)
     }
     
     // life cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "courseDetailSegue" {
-            let destination = segue.destination as! CourseDetailsView
-            destination.course = courseForDetails
+        if segue.identifier == "coursesSegue" {
+            let destination = segue.destination as! CoursesView
+            destination.selectedType = typeForDetails
         }
     }
     
@@ -50,8 +50,11 @@ class JoinCourseView: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        title = selectedType
         loadCourses()
     }
     
@@ -59,26 +62,25 @@ class JoinCourseView: UIViewController, UITableViewDataSource, UITableViewDelega
     func loadCourses() {
         CourseViewModel().getCourses { [self] succes, reponse in
             if succes {
+                types = []
+                types.append("All")
                 
-                if selectedType == "All" {
-                    courses = reponse!
-                } else {
-                    for course in reponse! {
-                        if selectedType == course.user?.typeInstructeur {
-                            courses.append(course)
-                        }
+                for course in reponse! {
+                    if !types.contains((course.user?.typeInstructeur)!) && (course.user?.typeInstructeur)! != "" {
+                        types.append((course.user?.typeInstructeur)!)
                     }
                 }
                 
-                coursesTableView.reloadData()
-            } else {
+                self.coursesTableView.reloadData()
+            }
+            else{
                 self.present(Alert.makeAlert(titre: "Error", message: "Could not load courses"), animated: true)
             }
         }
     }
     
     @IBAction func chatAction(_ sender: Any) {
-
+        
         // 1. Initialize Sendbird UIKit
         SBUMain.initialize(applicationId: "9A063A9E-85CA-4214-B178-91D97859CC06") {
             
@@ -89,7 +91,7 @@ class JoinCourseView: UIViewController, UITableViewDataSource, UITableViewDelega
         UserViewModel().getUserFromToken { [self] success, user in
             
             // 2. Set the current user
-            SBUGlobals.CurrentUser = SBUUser(userId: "new user")
+            SBUGlobals.CurrentUser = SBUUser(userId: (user?.name)!)
 
             // 3. Connect to Sendbird
             SBUMain.connect { (user, error) in

@@ -13,6 +13,7 @@ class CoursesView: UIViewController, UITableViewDataSource, UITableViewDelegate 
     // variables
     var courses = [Course]()
     var courseForDetails : Course?
+    var selectedType : String?
     
     // iboutlets
     @IBOutlet weak var coursesTableView: UITableView!
@@ -37,23 +38,6 @@ class CoursesView: UIViewController, UITableViewDataSource, UITableViewDelegate 
         self.performSegue(withIdentifier: "courseDetailSegue", sender: courseForDetails)
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == UITableViewCell.EditingStyle.delete) {
-            CourseViewModel().deleteCourse(_id: courses[indexPath.row]._id!) { success in
-                if success {
-                    self.courses.remove(at: indexPath.row)
-                    tableView.reloadData()
-                }else{
-                    self.present(Alert.makeAlert(titre: "Error", message: "Could not delete"),animated: true)
-                }
-            }
-        }
-    }
-    
     // life cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "courseDetailSegue" {
@@ -66,36 +50,32 @@ class CoursesView: UIViewController, UITableViewDataSource, UITableViewDelegate 
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
+        title = selectedType
         loadCourses(tv: self.coursesTableView)
     }
     
     // methods
     func loadCourses(tv: UITableView) {
-        CourseViewModel().getCourses { succes, reponse in
+        CourseViewModel().getCourses { [self] succes, reponse in
             if succes {
-                self.courses = reponse!
+                
+                if selectedType == "All" {
+                    courses = reponse!
+                } else {
+                    for course in reponse! {
+                        if selectedType == course.user?.typeInstructeur {
+                            courses.append(course)
+                        }
+                    }
+                }
+                
                 self.coursesTableView.reloadData()
             }
             else{
                 self.present(Alert.makeAlert(titre: "Error", message: "Could not load courses"), animated: true)
             }
         }
-    }
-    
-    var isEditingBool = false
-    // actions
-    @IBAction func editButton(_ sender: UIBarButtonItem) {
-        if isEditingBool {
-            coursesTableView.setEditing(false, animated: true)
-        } else {
-            coursesTableView.setEditing(true, animated: true)
-        }
-        isEditingBool = !isEditingBool
     }
     
     @IBAction func chatAction(_ sender: Any) {
@@ -108,6 +88,7 @@ class CoursesView: UIViewController, UITableViewDataSource, UITableViewDelegate 
         }
         
         UserViewModel().getUserFromToken { [self] success, user in
+            
             
             // 2. Set the current user
             SBUGlobals.CurrentUser = SBUUser(userId: (user?.name)!)

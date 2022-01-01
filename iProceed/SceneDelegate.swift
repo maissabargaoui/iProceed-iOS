@@ -56,7 +56,45 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url{
+            print(url)
+            let urlStr = url.absoluteString //1
+            // Parse the custom URL as per your uses, this will change as per requirement
+            let component = urlStr.components(separatedBy: "=") // 2
+            if component.count > 1, let idUser = component.last { // 3
+                // Access the storyboard and fetch an instance of the view controller
+                let storyboard = UIStoryboard(name: "Main", bundle: nil);
+                let viewController: ProfileView = storyboard.instantiateViewController(withIdentifier: "ProfileView") as! ProfileView
+                
+                UserViewModel().getUserById(_id: idUser) { success, user in
+                    if success{
+                        viewController.user = user
+                        if let topViewController = UIApplication.getTopViewController() {
+                            topViewController.present(viewController, animated: true, completion: nil)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
+extension UIApplication {
 
+    class func getTopViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+
+        if let nav = base as? UINavigationController {
+            return getTopViewController(base: nav.visibleViewController)
+
+        } else if let tab = base as? UITabBarController, let selected = tab.selectedViewController {
+            return getTopViewController(base: selected)
+
+        } else if let presented = base?.presentedViewController {
+            return getTopViewController(base: presented)
+        }
+        return base
+    }
 }
 

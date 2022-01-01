@@ -14,6 +14,8 @@ class EditProfileView: UIViewController, SecondModalTransitionListener {
     var user : User?
     
     // iboutlets
+    @IBOutlet weak var secondaryConfirmButton: UIButton!
+    @IBOutlet weak var locationTopLabel: UILabel!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
@@ -21,6 +23,11 @@ class EditProfileView: UIViewController, SecondModalTransitionListener {
     @IBOutlet weak var addLocationButton: UIButton!
     @IBOutlet weak var changeMyLocation: UIButton!
     @IBOutlet weak var clearMyLocationButton: UIButton!
+    @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var pricePerCourseLabel: UILabel!
+    @IBOutlet weak var pricePerCourseTF: UITextField!
+    @IBOutlet weak var professorTypeLabel: UILabel!
+    @IBOutlet weak var professorTypeTF: UITextField!
     
     // protocols
     
@@ -28,6 +35,14 @@ class EditProfileView: UIViewController, SecondModalTransitionListener {
     override func viewDidLoad() {
         super.viewDidLoad()
         SecondModalTransitionMediator.instance.setListener(listener: self)
+        
+        locationTopLabel.isHidden = true
+        pricePerCourseLabel.isHidden = true
+        pricePerCourseTF.isHidden = true
+        professorTypeTF.isHidden = true
+        professorTypeLabel.isHidden = true
+        secondaryConfirmButton.isHidden = true
+        
         initialize(onlyLocation: false)
     }
     
@@ -51,18 +66,37 @@ class EditProfileView: UIViewController, SecondModalTransitionListener {
         emailTF.backgroundColor = .gray
         emailTF.isEnabled = false
         
-        if user?.longitude == "" || user?.latitude == "" {
+        if user?.role == "Instructor" {
+            locationLabel.isHidden = false
+            pricePerCourseLabel.isHidden = false
+            pricePerCourseTF.isHidden = false
+            professorTypeTF.isHidden = false
+            professorTypeLabel.isHidden = false
+            pricePerCourseTF.text = String(user!.prixParCour!)
+            professorTypeTF.text = user?.typeInstructeur
+            
+            if user?.longitude == "" || user?.latitude == "" {
+                locationLabel.isHidden = true
+                addLocationButton.isHidden = false
+                changeMyLocation.isHidden = true
+                clearMyLocationButton.isHidden = true
+            } else {
+                locationLabel.isHidden = false
+                addLocationButton.isHidden = true
+                changeMyLocation.isHidden = false
+                clearMyLocationButton.isHidden = false
+                
+                locationLabel.text = (user?.latitude)! + ", " + (user?.longitude)!
+            }
+        } else {
             locationLabel.isHidden = true
-            addLocationButton.isHidden = false
+            locationTopLabel.isHidden = true
+            addLocationButton.isHidden = true
             changeMyLocation.isHidden = true
             clearMyLocationButton.isHidden = true
-        } else {
-            locationLabel.isHidden = false
             addLocationButton.isHidden = true
-            changeMyLocation.isHidden = false
-            clearMyLocationButton.isHidden = false
-            
-            locationLabel.text = (user?.latitude)! + ", " + (user?.longitude)!
+            confirmButton.isHidden = true
+            secondaryConfirmButton.isHidden = false
         }
     }
     
@@ -87,6 +121,11 @@ class EditProfileView: UIViewController, SecondModalTransitionListener {
         user?.name = nameTF.text
         user?.phone = phoneTF.text
         
+        if user?.role == "Instructor" {
+            user?.typeInstructeur = professorTypeTF.text
+        } else {
+            user?.typeInstructeur = ""
+        }
         
         UserViewModel().editProfile(user: user!) { success in
             if success {

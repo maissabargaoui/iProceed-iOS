@@ -61,7 +61,8 @@ class CourseViewModel {
                     [
                         "title" : title,
                         "description": description,
-                        //"date" : DateUtils.formatFromDate(date: date)
+                        "date" : DateUtils.formatFromDate(date: date),
+                        "user" : UserDefaults.standard.string(forKey: "userId")!
                     ]
             {
                 multipartFormData.append((value.data(using: .utf8))!, withName: key)
@@ -138,7 +139,25 @@ class CourseViewModel {
             title: jsonItem["title"].stringValue,
             description: jsonItem["description"].stringValue,
             date: Date(),
+            user: makeUser(jsonItem: jsonItem["user"]),
             idPhoto: jsonItem["idPhoto"].stringValue
+        )
+    }
+    
+    func makeUser(jsonItem: JSON) -> User {
+        User(
+            _id: jsonItem["_id"].stringValue,
+            name: jsonItem["name"].stringValue,
+            email: jsonItem["email"].stringValue,
+            address: jsonItem["address"].stringValue,
+            latitude: jsonItem["latitude"].stringValue,
+            longitude: jsonItem["longitude"].stringValue,
+            password: jsonItem["password"].stringValue,
+            phone: jsonItem["phone"].stringValue,
+            role: jsonItem["role"].stringValue,
+            isVerified: jsonItem["isVerified"].boolValue,
+            typeInstructeur: jsonItem["typeInstructeur"].stringValue,
+            prixParCour: jsonItem["prixParCour"].floatValue
         )
     }
 }

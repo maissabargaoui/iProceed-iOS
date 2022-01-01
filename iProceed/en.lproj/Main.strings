@@ -1,0 +1,411 @@
+
+/* Class = "UILabel"; text = "Please type the reset code sent to your email."; ObjectID = "04K-f3-eOB"; */
+"04K-f3-eOB.text" = "Please type the reset code sent to your email.";
+
+/* Class = "UINavigationItem"; title = "Course Details"; ObjectID = "0hZ-RV-nqZ"; */
+"0hZ-RV-nqZ.title" = "Course Details";
+
+/* Class = "UIButton"; configuration.title = "Add my location"; ObjectID = "1jt-xo-AoF"; */
+"1jt-xo-AoF.configuration.title" = "Add my location";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1jt-xo-AoF"; */
+"1jt-xo-AoF.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "1wR-rN-izr"; */
+"1wR-rN-izr.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Default is 10$"; ObjectID = "2Db-OW-YK1"; */
+"2Db-OW-YK1.placeholder" = "Default is 10$";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "2hB-rR-wI1"; */
+"2hB-rR-wI1.text" = "Sign In";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "32P-Uj-Ygm"; */
+"32P-Uj-Ygm.title" = "Save";
+
+/* Class = "UITextField"; placeholder = "Type the course title"; ObjectID = "39W-CW-7K8"; */
+"39W-CW-7K8.placeholder" = "Type the course title";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "4XG-hX-0E1"; */
+"4XG-hX-0E1.configuration.title" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "4XG-hX-0E1"; */
+"4XG-hX-0E1.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Course title"; ObjectID = "4ZV-5l-Egk"; */
+"4ZV-5l-Egk.text" = "Course title";
+
+/* Class = "UITextField"; placeholder = "Exp : John"; ObjectID = "64O-oa-ENZ"; */
+"64O-oa-ENZ.placeholder" = "Exp : John";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "6OT-qW-nMa"; */
+"6OT-qW-nMa.text" = "Name";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "6QW-yk-ckY"; */
+"6QW-yk-ckY.title" = "Save";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "6kN-Ck-LQv"; */
+"6kN-Ck-LQv.text" = "Phone";
+
+/* Class = "UINavigationItem"; title = "Join Free Course"; ObjectID = "7OS-19-4cU"; */
+"7OS-19-4cU.title" = "Join Free Course";
+
+/* Class = "UIButton"; configuration.title = "Continue With Payment"; ObjectID = "819-iB-kSj"; */
+"819-iB-kSj.configuration.title" = "Continue With Payment";
+
+/* Class = "UIButton"; normalTitle = "Continue With Payment"; ObjectID = "819-iB-kSj"; */
+"819-iB-kSj.normalTitle" = "Continue With Payment";
+
+/* Class = "UILabel"; text = "Tap to Authenticate with Face ID"; ObjectID = "83v-hg-MWb"; */
+"83v-hg-MWb.text" = "Tap to Authenticate with Face ID";
+
+/* Class = "UIButton"; configuration.title = "Logout"; ObjectID = "8mP-WU-rNk"; */
+"8mP-WU-rNk.configuration.title" = "Logout";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8mP-WU-rNk"; */
+"8mP-WU-rNk.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Add Course"; ObjectID = "ADI-lE-lsi"; */
+"ADI-lE-lsi.title" = "Add Course";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "AQc-47-Jq3"; */
+"AQc-47-Jq3.text" = "Email";
+
+/* Class = "UITextField"; placeholder = "Type the course title"; ObjectID = "ATy-Ul-ST3"; */
+"ATy-Ul-ST3.placeholder" = "Type the course title";
+
+/* Class = "UINavigationItem"; title = "Location"; ObjectID = "BHg-xg-kk0"; */
+"BHg-xg-kk0.title" = "Location";
+
+/* Class = "UIButton"; configuration.title = "Next"; ObjectID = "BUx-TQ-GQo"; */
+"BUx-TQ-GQo.configuration.title" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "BUx-TQ-GQo"; */
+"BUx-TQ-GQo.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "use this switch if creating an account"; ObjectID = "Cdk-vG-uKw"; */
+"Cdk-vG-uKw.text" = "use this switch if creating an account";
+
+/* Class = "UIButton"; configuration.title = "Instructor"; ObjectID = "Dip-PD-TQe"; */
+"Dip-PD-TQe.configuration.title" = "Instructor";
+
+/* Class = "UIButton"; normalTitle = "Instructor"; ObjectID = "Dip-PD-TQe"; */
+"Dip-PD-TQe.normalTitle" = "Instructor";
+
+/* Class = "UIButton"; configuration.title = "Edit this course"; ObjectID = "FSq-4g-KjC"; */
+"FSq-4g-KjC.configuration.title" = "Edit this course";
+
+/* Class = "UIButton"; normalTitle = "Edit this course"; ObjectID = "FSq-4g-KjC"; */
+"FSq-4g-KjC.normalTitle" = "Edit this course";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "HEC-NC-oJC"; */
+"HEC-NC-oJC.placeholder" = "Username";
+
+/* Class = "UILabel"; text = "Instructor"; ObjectID = "HSd-53-DKz"; */
+"HSd-53-DKz.text" = "Instructor";
+
+/* Class = "UILabel"; text = "Pay My Instruction "; ObjectID = "HfM-vM-Ws4"; */
+"HfM-vM-Ws4.text" = "Pay My Instruction ";
+
+/* Class = "UITextField"; placeholder = "Exp : Maths"; ObjectID = "HvI-GX-Iq3"; */
+"HvI-GX-Iq3.placeholder" = "Exp : Maths";
+
+/* Class = "UILabel"; text = "Price per course"; ObjectID = "IbX-A3-Hpx"; */
+"IbX-A3-Hpx.text" = "Price per course";
+
+/* Class = "UIButton"; configuration.title = "  Chat"; ObjectID = "JRh-PM-XaL"; */
+"JRh-PM-XaL.configuration.title" = "  Chat";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JRh-PM-XaL"; */
+"JRh-PM-XaL.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "10$"; ObjectID = "Jao-0B-FX5"; */
+"Jao-0B-FX5.text" = "10$";
+
+/* Class = "UIButton"; configuration.title = "Student"; ObjectID = "KCr-4F-rqU"; */
+"KCr-4F-rqU.configuration.title" = "Student";
+
+/* Class = "UIButton"; normalTitle = "Student"; ObjectID = "KCr-4F-rqU"; */
+"KCr-4F-rqU.normalTitle" = "Student";
+
+/* Class = "UIButton"; configuration.title = "Change my location"; ObjectID = "KbU-0W-ZYp"; */
+"KbU-0W-ZYp.configuration.title" = "Change my location";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "KbU-0W-ZYp"; */
+"KbU-0W-ZYp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Check Our Locations"; ObjectID = "Kj0-TD-HvC"; */
+"Kj0-TD-HvC.text" = "Check Our Locations";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "Lc1-Nq-vhS"; */
+"Lc1-Nq-vhS.text" = "Location";
+
+/* Class = "UILabel"; text = "instructor"; ObjectID = "Lrn-oV-4Ir"; */
+"Lrn-oV-4Ir.text" = "instructor";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "MIz-rP-pbJ"; */
+"MIz-rP-pbJ.configuration.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "MIz-rP-pbJ"; */
+"MIz-rP-pbJ.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "MpN-Cg-Iwj"; */
+"MpN-Cg-Iwj.placeholder" = "Phone";
+
+/* Class = "UINavigationItem"; title = "Role"; ObjectID = "OGx-3g-S0B"; */
+"OGx-3g-S0B.title" = "Role";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "PNK-eL-bSD"; */
+"PNK-eL-bSD.text" = "Sign In";
+
+/* Class = "UIButton"; configuration.title = "Next"; ObjectID = "PsE-UZ-Qx3"; */
+"PsE-UZ-Qx3.configuration.title" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "PsE-UZ-Qx3"; */
+"PsE-UZ-Qx3.normalTitle" = "Next";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "QIF-6T-VdB"; */
+"QIF-6T-VdB.title" = "Profile";
+
+/* Class = "UIButton"; configuration.title = "Add a picture"; ObjectID = "Qwv-9p-HRc"; */
+"Qwv-9p-HRc.configuration.title" = "Add a picture";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Qwv-9p-HRc"; */
+"Qwv-9p-HRc.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ROM-7F-KT5"; */
+"ROM-7F-KT5.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Payment"; ObjectID = "S8J-ws-Xfy"; */
+"S8J-ws-Xfy.title" = "Payment";
+
+/* Class = "UIButton"; configuration.title = "Edit picture"; ObjectID = "VcA-Hs-Kat"; */
+"VcA-Hs-Kat.configuration.title" = "Edit picture";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VcA-Hs-Kat"; */
+"VcA-Hs-Kat.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Forgot password"; ObjectID = "Vgj-RX-v9m"; */
+"Vgj-RX-v9m.title" = "Forgot password";
+
+/* Class = "UIButton"; configuration.title = "Edit profile"; ObjectID = "VtV-0E-cg1"; */
+"VtV-0E-cg1.configuration.title" = "Edit profile";
+
+/* Class = "UIButton"; normalTitle = "Edit profile"; ObjectID = "VtV-0E-cg1"; */
+"VtV-0E-cg1.normalTitle" = "Edit profile";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Vz0-iM-lzC"; */
+"Vz0-iM-lzC.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Forgot password ?"; ObjectID = "Y4k-Ay-jPM"; */
+"Y4k-Ay-jPM.configuration.title" = "Forgot password ?";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Y4k-Ay-jPM"; */
+"Y4k-Ay-jPM.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Welcome [name] please choose your role"; ObjectID = "Y8j-Re-lPm"; */
+"Y8j-Re-lPm.text" = "Welcome [name] please choose your role";
+
+/* Class = "UILabel"; text = "Amount :"; ObjectID = "ZMO-L3-j23"; */
+"ZMO-L3-j23.text" = "Amount :";
+
+/* Class = "UINavigationItem"; title = "Courses"; ObjectID = "a7X-Zi-W5k"; */
+"a7X-Zi-W5k.title" = "Courses";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "aSx-JW-J29"; */
+"aSx-JW-J29.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITextField"; placeholder = "ResetCode"; ObjectID = "aVR-0z-vUJ"; */
+"aVR-0z-vUJ.placeholder" = "ResetCode";
+
+/* Class = "UITextField"; placeholder = "Exp : email@example.com"; ObjectID = "ayB-uJ-DUp"; */
+"ayB-uJ-DUp.placeholder" = "Exp : email@example.com";
+
+/* Class = "UIButton"; configuration.title = "Reset"; ObjectID = "b8U-51-kSF"; */
+"b8U-51-kSF.configuration.title" = "Reset";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "b8U-51-kSF"; */
+"b8U-51-kSF.normalTitle" = "Reset";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "bbW-FJ-zka"; */
+"bbW-FJ-zka.text" = "Category";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "bf2-l4-4Ag"; */
+"bf2-l4-4Ag.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Instructor type"; ObjectID = "c6y-Aw-dEt"; */
+"c6y-Aw-dEt.text" = "Instructor type";
+
+/* Class = "UINavigationItem"; title = "Courses"; ObjectID = "cHe-02-cdu"; */
+"cHe-02-cdu.title" = "Courses";
+
+/* Class = "UILabel"; text = "Role not set"; ObjectID = "cgS-PU-40q"; */
+"cgS-PU-40q.text" = "Role not set";
+
+/* Class = "UIButton"; configuration.title = "Edit"; ObjectID = "cgg-ZF-agL"; */
+"cgg-ZF-agL.configuration.title" = "Edit";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cgg-ZF-agL"; */
+"cgg-ZF-agL.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Register"; ObjectID = "cuA-cJ-KaH"; */
+"cuA-cJ-KaH.title" = "Register";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "d8r-c1-VpE"; */
+"d8r-c1-VpE.placeholder" = "Email";
+
+/* Class = "UIButton"; configuration.title = "  Chat"; ObjectID = "dTh-dC-6GC"; */
+"dTh-dC-6GC.configuration.title" = "  Chat";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dTh-dC-6GC"; */
+"dTh-dC-6GC.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "e7j-o1-9qU"; */
+"e7j-o1-9qU.placeholder" = "Password";
+
+/* Class = "UIButton"; configuration.title = "Add To Favourites"; ObjectID = "fsv-r5-Qd7"; */
+"fsv-r5-Qd7.configuration.title" = "Add To Favourites";
+
+/* Class = "UIButton"; normalTitle = "Add To Favourites"; ObjectID = "fsv-r5-Qd7"; */
+"fsv-r5-Qd7.normalTitle" = "Add To Favourites";
+
+/* Class = "UILabel"; text = "Email not set"; ObjectID = "ghy-hm-ORl"; */
+"ghy-hm-ORl.text" = "Email not set";
+
+/* Class = "UILabel"; text = "Category title"; ObjectID = "go2-Gr-5Te"; */
+"go2-Gr-5Te.text" = "Category title";
+
+/* Class = "UILabel"; text = "Please type your email so that we send you an email to reset your password"; ObjectID = "hrb-Qh-Cxc"; */
+"hrb-Qh-Cxc.text" = "Please type your email so that we send you an email to reset your password";
+
+/* Class = "UILabel"; text = "Don't have an account yet ?"; ObjectID = "i0o-dt-hGQ"; */
+"i0o-dt-hGQ.text" = "Don't have an account yet ?";
+
+/* Class = "UITextField"; placeholder = "Repeat password"; ObjectID = "iMT-OL-YPy"; */
+"iMT-OL-YPy.placeholder" = "Repeat password";
+
+/* Class = "UITextField"; placeholder = "+ 216 XX XXX XXXX"; ObjectID = "ieA-4q-cJ0"; */
+"ieA-4q-cJ0.placeholder" = "+ 216 XX XXX XXXX";
+
+/* Class = "UINavigationItem"; title = "Course Details"; ObjectID = "jBl-3S-cEz"; */
+"jBl-3S-cEz.title" = "Course Details";
+
+/* Class = "UILabel"; text = "Name not set"; ObjectID = "kCv-GS-oTC"; */
+"kCv-GS-oTC.text" = "Name not set";
+
+/* Class = "UIButton"; configuration.title = "Clear my location"; ObjectID = "kwz-mi-MQZ"; */
+"kwz-mi-MQZ.configuration.title" = "Clear my location";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kwz-mi-MQZ"; */
+"kwz-mi-MQZ.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Check Private Courses"; ObjectID = "l4W-Rn-aJf"; */
+"l4W-Rn-aJf.configuration.title" = "Check Private Courses";
+
+/* Class = "UIButton"; normalTitle = "Check Private Courses"; ObjectID = "l4W-Rn-aJf"; */
+"l4W-Rn-aJf.normalTitle" = "Check Private Courses";
+
+/* Class = "UILabel"; text = "Course title"; ObjectID = "lak-sc-ffL"; */
+"lak-sc-ffL.text" = "Course title";
+
+/* Class = "UILabel"; text = "Phone not set"; ObjectID = "nEy-Zp-swD"; */
+"nEy-Zp-swD.text" = "Phone not set";
+
+/* Class = "UIButton"; configuration.title = "Verify"; ObjectID = "o1d-sv-4p8"; */
+"o1d-sv-4p8.configuration.title" = "Verify";
+
+/* Class = "UIButton"; highlightedTitle = "Log Out"; ObjectID = "o1d-sv-4p8"; */
+"o1d-sv-4p8.highlightedTitle" = "Log Out";
+
+/* Class = "UIButton"; normalTitle = "FingerPrint or FaceID "; ObjectID = "o1d-sv-4p8"; */
+"o1d-sv-4p8.normalTitle" = "FingerPrint or FaceID ";
+
+/* Class = "UITextField"; placeholder = "Confirm new password"; ObjectID = "o6q-ha-cAF"; */
+"o6q-ha-cAF.placeholder" = "Confirm new password";
+
+/* Class = "UILabel"; text = "Get face-to-face Instruction"; ObjectID = "o8Y-DB-y9t"; */
+"o8Y-DB-y9t.text" = "Get face-to-face Instruction";
+
+/* Class = "UINavigationItem"; title = "Edit course"; ObjectID = "oxU-sz-zoK"; */
+"oxU-sz-zoK.title" = "Edit course";
+
+/* Class = "UIButton"; configuration.title = "Start"; ObjectID = "p75-uv-3DQ"; */
+"p75-uv-3DQ.configuration.title" = "Start";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "p75-uv-3DQ"; */
+"p75-uv-3DQ.normalTitle" = "Start";
+
+/* Class = "UIButton"; configuration.title = "Check Private Courses"; ObjectID = "pMz-Do-Aox"; */
+"pMz-Do-Aox.configuration.title" = "Check Private Courses";
+
+/* Class = "UIButton"; normalTitle = "Check Private Courses"; ObjectID = "pMz-Do-Aox"; */
+"pMz-Do-Aox.normalTitle" = "Check Private Courses";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "qV8-iR-XFC"; */
+"qV8-iR-XFC.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "iProceed Through It "; ObjectID = "qmV-lw-MSD"; */
+"qmV-lw-MSD.text" = "iProceed Through It ";
+
+/* Class = "UINavigationItem"; title = "Category"; ObjectID = "r5c-l8-NLs"; */
+"r5c-l8-NLs.title" = "Category";
+
+/* Class = "UITextField"; placeholder = "Create password"; ObjectID = "rcH-U5-RPZ"; */
+"rcH-U5-RPZ.placeholder" = "Create password";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "rtM-Oz-rm8"; */
+"rtM-Oz-rm8.configuration.title" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "rtM-Oz-rm8"; */
+"rtM-Oz-rm8.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "sKy-aI-JgL"; */
+"sKy-aI-JgL.text" = "Label";
+
+/* Class = "UILabel"; text = "Please type a new password"; ObjectID = "shh-6H-lz0"; */
+"shh-6H-lz0.text" = "Please type a new password";
+
+/* Class = "UINavigationItem"; title = "Favorites"; ObjectID = "t34-5o-Yle"; */
+"t34-5o-Yle.title" = "Favorites";
+
+/* Class = "UINavigationItem"; title = "More"; ObjectID = "uco-ov-5Vc"; */
+"uco-ov-5Vc.title" = "More";
+
+/* Class = "UIButton"; configuration.title = "Save"; ObjectID = "ujW-JL-2th"; */
+"ujW-JL-2th.configuration.title" = "Save";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ujW-JL-2th"; */
+"ujW-JL-2th.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Pay "; ObjectID = "vaA-zv-mUt"; */
+"vaA-zv-mUt.configuration.title" = "Pay ";
+
+/* Class = "UIButton"; normalTitle = "Pay "; ObjectID = "vaA-zv-mUt"; */
+"vaA-zv-mUt.normalTitle" = "Pay ";
+
+/* Class = "UIButton"; configuration.title = "Confirm"; ObjectID = "vx2-iQ-mb9"; */
+"vx2-iQ-mb9.configuration.title" = "Confirm";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "vx2-iQ-mb9"; */
+"vx2-iQ-mb9.normalTitle" = "Confirm";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "wrw-Wh-qLr"; */
+"wrw-Wh-qLr.placeholder" = "Address";
+
+/* Class = "UITextField"; placeholder = "New password"; ObjectID = "y1i-qx-CvX"; */
+"y1i-qx-CvX.placeholder" = "New password";
+
+/* Class = "UIButton"; configuration.title = "Confirm"; ObjectID = "ybz-0R-BW0"; */
+"ybz-0R-BW0.configuration.title" = "Confirm";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "ybz-0R-BW0"; */
+"ybz-0R-BW0.normalTitle" = "Confirm";
+
+/* Class = "UINavigationItem"; title = "Edit Profile"; ObjectID = "ydN-oq-qw4"; */
+"ydN-oq-qw4.title" = "Edit Profile";
+
+/* Class = "UILabel"; text = "Or connect with"; ObjectID = "znj-a7-ksu"; */
+"znj-a7-ksu.text" = "Or connect with";
+
+/* Class = "UINavigationItem"; title = "Welcome"; ObjectID = "zoL-d1-V1C"; */
+"zoL-d1-V1C.title" = "Welcome";

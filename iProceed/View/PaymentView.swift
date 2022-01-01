@@ -35,14 +35,11 @@ class PaymentView: UIViewController {
     // variables
     var user: User?
     var braintreeClient: BTAPIClient!
-    var amount = "10"
     
     // iboutlets
     @IBOutlet weak var instructorName: UILabel!
     
-    
     // protocols
-    
     
     // life cycle
     override func viewDidLoad() {
@@ -60,10 +57,10 @@ class PaymentView: UIViewController {
         payPalDriver.appSwitchDelegate = self // Optional
         
         // Specify the transaction amount here. "2.32" is used in this example.
-        let request = BTPayPalRequest(amount: amount)
+        let request = BTPayPalRequest(amount: String((user?.prixParCour)!))
         request.currencyCode = "USD" // Optional; see BTPayPalRequest.h for more options
         
-        payPalDriver.requestOneTimePayment(request) { (tokenizedPayPalAccount, error) in
+        payPalDriver.requestOneTimePayment(request) { [self] (tokenizedPayPalAccount, error) in
             if let tokenizedPayPalAccount = tokenizedPayPalAccount {
                 print("Got a nonce: \(tokenizedPayPalAccount.nonce)")
                 
@@ -81,7 +78,7 @@ class PaymentView: UIViewController {
                 
                 let message =
                 "You have successfuly paid "
-                + self.amount
+                + String((user?.prixParCour)!)
                 + " USD using the paypal account : "
                 + email!
                 

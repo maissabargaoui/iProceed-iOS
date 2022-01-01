@@ -10,8 +10,6 @@ import UIKit
 import FBSDKLoginKit
 
 class ProfileView: UIViewController, ModalTransitionListener {
-
-    // TODO qrcode
     
     // variables
     var user : User?
@@ -21,12 +19,15 @@ class ProfileView: UIViewController, ModalTransitionListener {
     @IBOutlet weak var roleLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var qrCodeImage: UIImageView!
+    @IBOutlet weak var editProfileButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
     
     // life cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editProfileSegue" {
             /*let controller = segue.destinationViewController as! ResultViewController
-            controller.match = self.match*/
+             controller.match = self.match*/
             
             let destination = segue.destination as! EditProfileView
             destination.user = user
@@ -36,39 +37,85 @@ class ProfileView: UIViewController, ModalTransitionListener {
     override func viewDidLoad() {
         super.viewDidLoad()
         ModalTransitionMediator.instance.setListener(listener: self)
-        initializeProfile()
-    }
-
-    // methods
-    func popoverDismissed() {
-        initializeProfile()
+        
+        editProfileButton.isHidden = true
+        logoutButton.isHidden = true
     }
     
-    func initializeProfile() {
-        print("initializing profile")
-        UserViewModel().getUserFromToken(completed: { success, user in
-            if success {
-                if user?.name != "" {
-                    self.nameLabel.text = user?.name
+    override func viewDidAppear(_ animated: Bool) {
+        
+        checkUserAndInitialize()
+    }
+    
+    // methods
+    func popoverDismissed() {
+        checkUserAndInitialize()
+    }
+    
+    func checkUserAndInitialize() {
+        if user != nil {
+            initializeProfile(user: user!)
+        } else {
+            if (UserDefaults.standard.string(forKey: "userId") != nil) {
+                if (UserDefaults.standard.string(forKey: "userId")! != "") {
+                    
+                    UserViewModel().getUserFromToken(completed: { [self] success, userFromRep in
+                        if success {
+                            
+                            editProfileButton.isHidden = false
+                            logoutButton.isHidden = false
+                            
+                            initializeProfile(user: userFromRep!)
+                            
+                        } else {
+                            self.present(Alert.makeAlert(titre: "Error", message: "Could not verify token"), animated: true
+                            )
+                        }
+                    })
                 }
-                
-                if user?.role != "" {
-                    self.roleLabel.text = user?.role
-                }
-                
-                if user?.email != "" {
-                    self.emailLabel.text = user?.email
-                }
-                
-                if user?.phone != "" {
-                    self.phoneLabel.text = user?.phone
-                }
-                
-            } else {
-                self.present(Alert.makeAlert(titre: "Error", message: "Could not verify token"), animated: true
-                )
             }
-        })
+        }
+    }
+    
+    func initializeProfile(user: User) {
+        print("initializing profile")
+        
+        qrCodeImage.image = generateQRCode(from: "iProceedCustomUrl://idUser=" + user._id!
+        )
+        
+        if user.name != "" {
+            nameLabel.text = user.name
+        }
+        
+        if user.role != "" {
+            roleLabel.text = user.role
+        }
+        
+        if user.email != "" {
+            emailLabel.text = user.email
+        }
+        
+        if user.phone != "" {
+            phoneLabel.text = user.phone
+        }
+        
+        
+    }
+    
+    
+    func generateQRCode(from string: String) -> UIImage? {
+        let data = string.data(using: String.Encoding.ascii)
+        
+        if let filter = CIFilter(name: "CIQRCodeGenerator") {
+            filter.setValue(data, forKey: "inputMessage")
+            let transform = CGAffineTransform(scaleX: 3, y: 3)
+            
+            if let output = filter.outputImage?.transformed(by: transform) {
+                return UIImage(ciImage: output)
+            }
+        }
+        
+        return nil
     }
     
     // actions

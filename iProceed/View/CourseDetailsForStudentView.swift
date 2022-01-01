@@ -7,13 +7,12 @@
 
 import UIKit
 
-class CourseDetailsView: UIViewController {
+class CourseDetailsForStudentView: UIViewController {
     
     // variables
     var course: Course?
     
     // iboutlets
-    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var courseImage: UIImageView!
     
@@ -27,10 +26,6 @@ class CourseDetailsView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if course?.user?._id != UserDefaults.standard.string(forKey: "userId") {
-            deleteButton.isHidden = true
-        }
         
         self.title = course?.title
         descriptionTextView.text = course?.description
