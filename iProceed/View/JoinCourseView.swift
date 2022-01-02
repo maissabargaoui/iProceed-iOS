@@ -41,7 +41,7 @@ class JoinCourseView: UIViewController, UITableViewDataSource, UITableViewDelega
     // life cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "courseDetailSegue" {
-            let destination = segue.destination as! CourseDetailsView
+            let destination = segue.destination as! CourseDetailsForStudentView
             destination.course = courseForDetails
         }
     }
@@ -59,6 +59,8 @@ class JoinCourseView: UIViewController, UITableViewDataSource, UITableViewDelega
     func loadCourses() {
         CourseViewModel().getCourses { [self] succes, reponse in
             if succes {
+                
+                courses = []
                 
                 if selectedType == "All" {
                     courses = reponse!

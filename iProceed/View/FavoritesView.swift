@@ -54,7 +54,7 @@ class FavoritesView: UIViewController, UITableViewDataSource, UITableViewDelegat
     // life cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "courseDetailsSegue" {
-            let destination = segue.destination as! CourseDetailsView
+            let destination = segue.destination as! CourseDetailsForStudentView
             destination.course = courseForDetails
         }
     }

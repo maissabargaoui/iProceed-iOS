@@ -13,7 +13,7 @@ class CourseDetailsView: UIViewController {
     var course: Course?
     
     // iboutlets
-    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var courseImage: UIImageView!
     
@@ -29,7 +29,7 @@ class CourseDetailsView: UIViewController {
         super.viewDidLoad()
         
         if course?.user?._id != UserDefaults.standard.string(forKey: "userId") {
-            deleteButton.isHidden = true
+            deleteButton.accessibilityElementsHidden = true
         }
         
         self.title = course?.title
@@ -44,7 +44,9 @@ class CourseDetailsView: UIViewController {
         self.present(Alert.makeActionAlert(titre: "Alert", message: "Are you sure you want to delete this course", action: UIAlertAction(title: "Yes", style: .destructive, handler: { [self] UIAlertAction in
             CourseViewModel().deleteCourse(_id: (course?._id)!) { success in
                 if success {
-                    self.present(Alert.makeAlert(titre: "Success", message: "Course deleted"),animated: true)
+                    
+                    self.navigationController?.popToRootViewController(animated: true)
+                    
                 }
             }
         })),animated: true)

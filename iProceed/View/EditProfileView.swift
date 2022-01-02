@@ -130,7 +130,7 @@ class EditProfileView: UIViewController, SecondModalTransitionListener {
         UserViewModel().editProfile(user: user!) { success in
             if success {
                 let action = UIAlertAction(title: "Proceed", style: .default) { UIAlertAction in
-                    self.dismiss(animated: true, completion: nil)
+                    self.navigationController?.popViewController(animated: true)
                 }
                 self.present(Alert.makeSingleActionAlert(titre: "Success", message: "Profile edited successfully", action: action), animated: true)
             } else {

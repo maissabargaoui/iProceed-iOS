@@ -60,6 +60,8 @@ class CoursesView: UIViewController, UITableViewDataSource, UITableViewDelegate 
         CourseViewModel().getCourses { [self] succes, reponse in
             if succes {
                 
+                courses = []
+                
                 if selectedType == "All" {
                     courses = reponse!
                 } else {

@@ -96,7 +96,7 @@ class SetLocationView: UIViewController, MKMapViewDelegate, CLLocationManagerDel
                 UserViewModel().setLocation(email: (user?.email)!, latitude: myPin.coordinate.latitude, longitude: myPin.coordinate.longitude, clear: false) { success in
                     if success {
                         let action = UIAlertAction(title: "Proceed", style: .default) { uiAction in
-                            self.dismiss(animated: true, completion: nil)
+                            navigationController?.popViewController(animated: true)
                         }
                         self.present(Alert.makeSingleActionAlert(titre: "Success", message: "Location saved !", action: action),animated: true)
                     } else {
