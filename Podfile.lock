@@ -5,6 +5,14 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
+  - AppCenter (4.4.1):
+    - AppCenter/Analytics (= 4.4.1)
+    - AppCenter/Crashes (= 4.4.1)
+  - AppCenter/Analytics (4.4.1):
+    - AppCenter/Core
+  - AppCenter/Core (4.4.1)
+  - AppCenter/Crashes (4.4.1):
+    - AppCenter/Core
   - Braintree (4.22.0):
     - Braintree/Card (= 4.22.0)
     - Braintree/Core (= 4.22.0)
@@ -27,14 +35,14 @@ PODS:
   - Braintree/UI (4.22.0):
     - Braintree/Card
     - Braintree/Core
-  - FBAEMKit (12.1.0):
-    - FBSDKCoreKit_Basics (= 12.1.0)
-  - FBSDKCoreKit (12.1.0):
-    - FBAEMKit (= 12.1.0)
-    - FBSDKCoreKit_Basics (= 12.1.0)
-  - FBSDKCoreKit_Basics (12.1.0)
-  - FBSDKLoginKit (12.1.0):
-    - FBSDKCoreKit (= 12.1.0)
+  - FBAEMKit (12.2.1):
+    - FBSDKCoreKit_Basics (= 12.2.1)
+  - FBSDKCoreKit (12.2.1):
+    - FBAEMKit (= 12.2.1)
+    - FBSDKCoreKit_Basics (= 12.2.1)
+  - FBSDKCoreKit_Basics (12.2.1)
+  - FBSDKLoginKit (12.2.1):
+    - FBSDKCoreKit (= 12.2.1)
   - GoogleSignIn (6.0.2):
     - AppAuth (~> 1.4)
     - GTMAppAuth (~> 1.0)
@@ -43,7 +51,7 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
-  - lottie-ios (3.2.3)
+  - lottie-ios (3.3.0)
   - SendBirdSDK (3.1.1)
   - SendBirdUIKit (2.2.1):
     - SendBirdSDK (~> 3.1.1)
@@ -54,6 +62,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
+  - AppCenter
   - Braintree (~> 4.22.0)
   - FBSDKLoginKit
   - GoogleSignIn
@@ -66,6 +75,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AppAuth
+    - AppCenter
     - Braintree
     - FBAEMKit
     - FBSDKCoreKit
@@ -84,21 +94,22 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  AppCenter: b0b6f1190215b5f983c42934db718f3b46fff3c0
   Braintree: e814ec196208d3e961c488cf4071de043f399cf9
-  FBAEMKit: 56c0bb9b42e3747cd82b67934f0c2b19325382ea
-  FBSDKCoreKit: 75368765d9c2303073145a7925dfaa9d60bcd77b
-  FBSDKCoreKit_Basics: 39865aff97e5f6951a78fb3e89dc4460e35e1895
-  FBSDKLoginKit: e993f97c7cc794c5da4056d8aec3c3d66033a727
+  FBAEMKit: 4cea610d0bc1680572f2aad7b25db7a2f2690d82
+  FBSDKCoreKit: 5b1992fe65802ca26be7e68bc4fac5f59fa39908
+  FBSDKCoreKit_Basics: a6a92ca628e05f86f458a4721574c5ddfb058ba3
+  FBSDKLoginKit: 7467b7f988ca4fdf48f12a839bcfce4264752429
   GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
-  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   SendBirdSDK: f698cf686d732889d79854756aba6bbc20062a00
   SendBirdUIKit: 19f911839f10908e58db91900d33b6758ad47744
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: c2f275e9e5b02560169be95a6e8e630ba2835c3f
+PODFILE CHECKSUM: 96a24f6c27b2eaf33d1c2c948500ba3a1cd01d07
 
 COCOAPODS: 1.11.2
