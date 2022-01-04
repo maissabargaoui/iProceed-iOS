@@ -56,5 +56,15 @@ https://codewithchris.com/swiftyjson/
  How to implement User Token-based Authentication with Sign in with Google , Facebook And Apple
  
  How to integrate Paypal Payment Method
+ 
+ How To Secure Payment With FaceId
+ 
+ How To Add Dark/Light Mode 
+ 
+ How To Switch Languages In the Application 
+ 
+ How To Generate User QrCode
+ 
+ 
 
 
