@@ -12,12 +12,22 @@ import FBSDKCoreKit
 import TwitterKit
 import Braintree
 
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
+
 @main 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        //APPCENTER
+        AppCenter.start(withAppSecret: "8084e911-f65e-442c-a5c2-0fc234705299", services:[
+          Analytics.self,
+          Crashes.self
+        ])
         
         // Paypal
         BTAppSwitch.setReturnURLScheme("com.app.launch.iProceed.payments")
