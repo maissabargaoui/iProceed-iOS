@@ -254,29 +254,6 @@ class UserViewModel {
             }
     }
     
-    func setLocation(email: String, latitude: Double, longitude: Double, clear: Bool, completed: @escaping (Bool) -> Void ) {
-        
-        AF.request(Constants.serverUrl + "/user/setLocation",
-                   method: .put,
-                   parameters: [
-                    "email": email,
-                    "latitude": latitude,
-                    "longitude" : longitude,
-                    "clear" : clear
-                   ],
-                   encoding: JSONEncoding.default)
-            .response { response in
-                switch response.result {
-                case .success:
-                    print("Success")
-                    completed(true)
-                case let .failure(error):
-                    print(error)
-                    completed(false)
-                }
-            }
-    }
-    
     func makeUser(jsonItem: JSON) -> User {
         User(
             _id: jsonItem["_id"].stringValue,

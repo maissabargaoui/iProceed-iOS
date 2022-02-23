@@ -13,9 +13,6 @@
 		046EAD1527499AF900B670FA /* iProceed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 046EAD1327499AF900B670FA /* iProceed.xcdatamodeld */; };
 		046EAD1727499AFB00B670FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046EAD1627499AFB00B670FA /* Assets.xcassets */; };
 		046EAD1A27499AFB00B670FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046EAD1827499AFB00B670FA /* LaunchScreen.storyboard */; };
-		046EAD2527499AFB00B670FA /* iProceedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAD2427499AFB00B670FA /* iProceedTests.swift */; };
-		046EAD3027499AFC00B670FA /* iProceedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAD2F27499AFC00B670FA /* iProceedUITests.swift */; };
-		046EAD4127499B0F00B670FA /* 61425-light-learning.json in Resources */ = {isa = PBXBuildFile; fileRef = 046EAD4027499B0F00B670FA /* 61425-light-learning.json */; };
 		1012C1FA27616E0E005706E7 /* ModalTransitionMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1012C1F927616E0E005706E7 /* ModalTransitionMediator.swift */; };
 		101623342762567B001E67D3 /* SetLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101623332762567B001E67D3 /* SetLocationView.swift */; };
 		101623362762578C001E67D3 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101623352762578C001E67D3 /* PinAnnotation.swift */; };
@@ -85,12 +82,7 @@
 		046EAD1927499AFB00B670FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		046EAD1B27499AFB00B670FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046EAD2027499AFB00B670FA /* iProceedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iProceedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		046EAD2427499AFB00B670FA /* iProceedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProceedTests.swift; sourceTree = "<group>"; };
-		046EAD2627499AFB00B670FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046EAD2B27499AFB00B670FA /* iProceedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iProceedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		046EAD2F27499AFC00B670FA /* iProceedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProceedUITests.swift; sourceTree = "<group>"; };
-		046EAD3127499AFC00B670FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		046EAD4027499B0F00B670FA /* 61425-light-learning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "61425-light-learning.json"; sourceTree = "<group>"; };
 		09F7040DD3D9AD78623BC385 /* Pods-iProceed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProceed.debug.xcconfig"; path = "Target Support Files/Pods-iProceed/Pods-iProceed.debug.xcconfig"; sourceTree = "<group>"; };
 		1012C1F927616E0E005706E7 /* ModalTransitionMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransitionMediator.swift; sourceTree = "<group>"; };
 		101623332762567B001E67D3 /* SetLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLocationView.swift; sourceTree = "<group>"; };
@@ -172,8 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				046EAD0927499AF900B670FA /* iProceed */,
-				046EAD2327499AFB00B670FA /* iProceedTests */,
-				046EAD2E27499AFB00B670FA /* iProceedUITests */,
 				046EAD0827499AF900B670FA /* Products */,
 				C43AEDAFDB48C2922E76A2A5 /* Frameworks */,
 				D0759A706CE3655BA9BDFC03 /* Pods */,
@@ -204,27 +194,8 @@
 				046EAD1627499AFB00B670FA /* Assets.xcassets */,
 				046EAD1B27499AFB00B670FA /* Info.plist */,
 				046EAD1327499AF900B670FA /* iProceed.xcdatamodeld */,
-				046EAD4027499B0F00B670FA /* 61425-light-learning.json */,
 			);
 			path = iProceed;
-			sourceTree = "<group>";
-		};
-		046EAD2327499AFB00B670FA /* iProceedTests */ = {
-			isa = PBXGroup;
-			children = (
-				046EAD2427499AFB00B670FA /* iProceedTests.swift */,
-				046EAD2627499AFB00B670FA /* Info.plist */,
-			);
-			path = iProceedTests;
-			sourceTree = "<group>";
-		};
-		046EAD2E27499AFB00B670FA /* iProceedUITests */ = {
-			isa = PBXGroup;
-			children = (
-				046EAD2F27499AFC00B670FA /* iProceedUITests.swift */,
-				046EAD3127499AFC00B670FA /* Info.plist */,
-			);
-			path = iProceedUITests;
 			sourceTree = "<group>";
 		};
 		8D36B0822750410700CDB60A /* View */ = {
@@ -427,7 +398,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				046EAD1A27499AFB00B670FA /* LaunchScreen.storyboard in Resources */,
-				046EAD4127499B0F00B670FA /* 61425-light-learning.json in Resources */,
 				046EAD1727499AFB00B670FA /* Assets.xcassets in Resources */,
 				046EAD1227499AF900B670FA /* Main.storyboard in Resources */,
 			);
@@ -638,7 +608,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046EAD2527499AFB00B670FA /* iProceedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,7 +615,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046EAD3027499AFC00B670FA /* iProceedUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,7 +783,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 56V2PAKZ6N;
+				DEVELOPMENT_TEAM = G96V29LG5G;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = iProceed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -840,7 +808,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 56V2PAKZ6N;
+				DEVELOPMENT_TEAM = G96V29LG5G;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = iProceed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
